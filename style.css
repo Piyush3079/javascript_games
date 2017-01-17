@@ -1,6 +1,13 @@
 body{
 	text-align: center;
 }
+form{
+	margin-top: 150px;
+}
+.container{
+	display:none;
+	margin-top: 150px;
+}
 .main{
 	width:200px;
 	height: 200px;
