@@ -1,0 +1,18 @@
+body{
+	text-align: center;
+}
+.main{
+	width:200px;
+	height: 200px;
+	background: green;
+	position: absolute;
+}
+.col-md-4{
+	border: 2px solid black;
+	position: relative;
+	height: 66px;
+	padding: 4px;
+	text-align: center;
+	color: #f5f5f5;
+	font-size: 20px;
+}
