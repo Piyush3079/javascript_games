@@ -13,8 +13,15 @@
 	</head>
 	<body>
 		<div>
-			<form>
-				<label>Player 1 select your mark</label><br>
+			<form class="form-inline" style="">
+			  <div class="form-group">
+			    <input type="text" class="form-control player1" placeholder="Player 1 name">
+			    <input type="text" class="form-control player2" placeholder="Player 2 name">
+			  </div>
+			  <button class="btn btn-default">Submit</button>
+			</form>
+			<form id="selector_form" style="display: none;">
+				<label id="player_select_mark"></label><br>
 				<input type="radio" name="X" value="X" class="X"> X<br>
   				<input type="radio" name="X" value="O" class="X"> O<br>
 			</form>
