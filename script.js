@@ -11,6 +11,10 @@ $(function(){
 			alert("Enter Player 2 Name");
 			window.location = "index.html";
 		}
+		else if(player_1 == player_2){
+			alert("Player names must be different");
+			window.location = "index.html";
+		}
 		$('.form-inline').css('display', 'none');
 		$('#selector_form').css('display', 'block');
 		$('#player_select_mark').text(player_1+" select your mark!!!");
@@ -22,8 +26,8 @@ $(function(){
 			else if(x == "O"){
 				var y = "X";
 			}
-			$('.container').css('display', 'block');
 			$('form').css('display', 'none');
+			$('.container').css('display', 'block');
 			if(x == "X"){
 				$('#player_1').text(player_1+' is '+' : '+ ' '+' '+x);
 				$('#player_2').text(player_2+' is '+' : '+ ' '+' '+'O');
@@ -96,22 +100,12 @@ $(function(){
 						window.location = "index.html";
 					}
 				}
-				for(var j=0;j<1;j++){
-					if(array[j]==x && array[j+4]==x && array[j+8]==x){
+				for(var j=0;j<3;j+=2){
+					if(array[j]==x && array[4]==x && array[8-j]==x){
 						alert(player_1+" wins the game");
 						window.location = "index.html";
 					}
-					else if(array[j]==y && array[j+4]==y && array[j+8]==y){
-						alert(player_2+" wins the game");
-						window.location = "index.html";
-					}
-				}
-				for(var j=2;j<3;j++){
-					if(array[j]==x && array[j+2]==x && array[j+2]==x){
-						alert(player_1+" wins the game");
-						window.location = "index.html";
-					}
-					else if(array[j]==y && array[j+2]==y && array[j+2]==y){
+					else if(array[j]==y && array[4]==y && array[8-j]==y){
 						alert(player_2+" wins the game");
 						window.location = "index.html";
 					}
